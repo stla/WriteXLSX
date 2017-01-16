@@ -1,0 +1,42 @@
+name:                writexlsx01
+version:             0.1.0.0
+synopsis:            Simple project template from stack
+description:         Please see README.md
+homepage:            https://github.com/stla/writexlsx01#readme
+license:             BSD3
+license-file:        LICENSE
+author:              Stéphane Laurent
+maintainer:          laurent_step@yahoo.fr
+copyright:           2017 Stéphane Laurent
+category:            Excel
+build-type:          Simple
+cabal-version:       >=1.10
+extra-source-files:  README.md
+
+library
+  hs-source-dirs:      src
+  exposed-modules:     WriteXLSX
+                     , WriteXLSX.DataframeToSheet
+                     , WriteXLSX.Empty
+  default-language:    Haskell2010
+  build-depends:       base >= 4.7 && < 5
+                     , xlsx >= 0.4.1
+                     , aeson >= 1.0.2.1
+                     , dates
+                     , regex-compat
+                     , containers
+                     , text
+                     , lens
+                     , bytestring
+                     , unordered-containers
+                     , vector
+                     , time
+
+executable writexlsx01
+  hs-source-dirs:      src-commandline
+  main-is:             Main.hs
+  other-modules:
+  default-language:    Haskell2010
+  build-depends:       base >= 4.7 && < 5
+                     , writexlsx01
+                     , optparse-applicative

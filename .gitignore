@@ -1,0 +1,5 @@
+.stack-work
+*.Rproj
+.Rproj.user
+.Rhistory
+tests_XLSXfiles
